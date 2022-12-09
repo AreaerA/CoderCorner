@@ -15,8 +15,6 @@ import { Component } from 'react';
 // import PropTypes from 'prop-types';
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import configModule from 'config';
-const config = configModule.client; // webpack v5 does not allow named imports for JSON modules
 
 // actions
 // import * as authActions from './store/actions/creators/authActions';
@@ -57,7 +55,7 @@ const config = configModule.client; // webpack v5 does not allow named imports f
 // import { initializeGTM } from './utils/reactGTM';
 
 // styles and assets
-import styles from './App.scss';
+// import styles from './App.scss';
 
 // Initialize Google Tag Manager.
 // initializeGTM();

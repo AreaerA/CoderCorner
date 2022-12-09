@@ -2,4 +2,13 @@
 node_modules/
 
 # dotenv environment variables file
-.envc
+.env
+
+# bundled data
+dist/
+
+# Mac users **MUST** 
+.DS_Store
+
+#
+coverage/
