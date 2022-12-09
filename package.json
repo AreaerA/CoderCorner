@@ -1,0 +1,29 @@
+{
+  "name": "codercorner",
+  "version": "1.0.0",
+  "description": "A place to develop developers",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "format": "prettier --write \"src/**/*{js,jsx,ts,tsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AreaerA/CoderCorner.git"
+  },
+  "author": "Areaera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AreaerA/CoderCorner/issues"
+  },
+  "homepage": "https://github.com/AreaerA/CoderCorner#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  }
+}
