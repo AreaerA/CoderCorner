@@ -1,0 +1,40 @@
+{
+  "name": "codercorner",
+  "version": "1.0.0",
+  "description": "A place to develop developers",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*{js,jsx,ts,tsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AreaerA/CoderCorner.git"
+  },
+  "author": "Areaera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AreaerA/CoderCorner/issues"
+  },
+  "homepage": "https://github.com/AreaerA/CoderCorner#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.0.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.8.1",
+    "sass": "^1.56.2",
+    "vite": "^4.0.0"
+  }
+}
