@@ -23,7 +23,8 @@ import LocationListener from "./components/library/LocationListener";
 // global styles
 import "./stylesheets/global/style.scss";
 
-const root = createRoot(document.getElementById("app"));
+// new function for creating the source of the app, 
+const root = createRoot(document.getElementById("root"));
 
 const render = (Component) => {
   root.render(
