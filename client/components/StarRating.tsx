@@ -28,13 +28,14 @@ useEffect(() => {
 let name = 'five-pointed-star'; 
 function handleClick(e, i) {
     e.preventDefault();
-    name = "five-pointed-star:after";}
+    name = "five-pointed-star";
+}
 
     return(
         <div>
             <h1>Star Ratings</h1>
             <div className='Star-Container'>
-                {/* <div className="five-pointed-star:before" key = {1} onClick = {}></div>
+                {/* <div className="five-pointed-star:before" key = {1}></div>
                 <div className="five-pointed-star:before" key = {2}></div>
                 <div className="five-pointed-star:before" key = {3}></div>
                 <div className="five-pointed-star:before" key = {4}></div>
@@ -43,7 +44,7 @@ function handleClick(e, i) {
                      <div className="five-pointed-star" key={star+1} onClick={(e) => handleClick(e, i)}></div>
                 )
                 )} */}
-                {star}
+                {}
             </div>
         </div >
     )
