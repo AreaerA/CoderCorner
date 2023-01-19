@@ -14,6 +14,9 @@
 // import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import StarRating from './components/StarRating';
 import { Widget } from './components/StarWidget'
+import PhoneNumber from './components/PhoneNumber';
+import { useState } from 'react';
+
 
 /**
  *  Storing ENDPOINTS in config enables us to share these endpoints
@@ -33,11 +36,14 @@ const App = () => {
 //             .then(res => res.json())
 //             .then(data => setLeaderboard(data))
 //     }, []);
-  
+  const [value, setValue] = useState("");
     return (
-      <div>
-        <StarRating />
-        <Widget />
+      <div className='App'>
+        {/* <StarRating />
+        <Widget /> */}
+        <h1>Phone Number Input</h1>
+        <p>Value : {value}</p>
+        <PhoneNumber onChange={setValue}/>
         {/* < HelloWorld / > */}
       </div>
     );

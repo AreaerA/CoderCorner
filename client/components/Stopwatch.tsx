@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 export default function Stopwatch() {
   const [isRunning, setIsRunning] = useState(false)
-  const [time, setTime] = useState(250559999)
+  const [time, setTime] = useState(0)
   const watch = useRef<ReturnType<typeof setInterval>>()
 
   useEffect(() => {
