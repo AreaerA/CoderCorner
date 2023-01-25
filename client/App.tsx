@@ -23,14 +23,6 @@ import HelloWorld from './components/helloworld'
  *  social bot interceptor as well without having to remember to do so!
  */
 
-const mapStateToProps = (store) => ({
-
-});
-
-const mapDispatchToProps = (dispatch) => ({
-
-});
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +37,7 @@ class App extends Component {
 
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
 
   }
 
