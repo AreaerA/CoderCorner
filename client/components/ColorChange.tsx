@@ -27,11 +27,54 @@
 // 7. The colored boxes should have a data-testid of correct-color if it is the correct color, and incorrect-color if it is not the correct color.
 
 // Note: Without the data-testid properties, your tests will fail.
+import React, { useState, useEffect } from "react";
 
 export default function ColorChange() {
 
+  const [answer, setAnswer] = useState<string>(''); 
+  const [colorArray, setColorArray] = useState<string[]>([]);
+  const [restart, setRestart] = useState<boolean>(false);
+  
+useEffect(() => {
+
+  const random_hex_color_code = () => {
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+  return array
+  }
+  const newColorArray : string[] = [];
+  for (let i = 0; i < 3; i++) {
+      newColorArray.push(random_hex_color_code())
+  }
+  setColorArray(newColorArray);
+  setAnswer(newColorArray[2])
+  shuffleArray(colorArray); 
+  setRestart(false);
+}, [setColorArray, setAnswer, restart]);
+
+const answerTest = (key) => {
+  return key === answer ?  true : false; 
+}
+
+  const style : CSS.Properties= {
+    display: 'flex',
+    flex- flow: 'row-wrap',
+    color: `${el}`,
+    height: "10rem",
+    width: "10rem",
+    border: '1px',
+    border - style: "solid",
+    }
     return (
-          <div
+  <div>
+    <div
       style={{
         display: "flex",
         flexDirection: "column",
@@ -39,15 +82,35 @@ export default function ColorChange() {
       }}
     >
       <h1>Color Codes</h1>
+        <h1>State: Answer-{answer}</h1>
+        <h1>State: Color Array-{colorArray}</h1>
+        <h1>State: Restart-{`${restart}`}</h1>
       {/* Randomly generate the HEX below. */}
-      <h2>#FFFFFF</h2>
+      {/* <h2>#FFFFFF</h2> */}
       <h2>What color is this?</h2>
-      {/*
-        <div data-testid="color-container">
-          <div data-testid="incorrect-color"></div>
-          <div data-testid="correct-color"></div>
+        <div data-testid='color-container'>
+          {colorArray.map(el => {
+            return (
+              <div 
+                key={`${el}`} 
+                onClick= {() => answerTest(`${el}`)} 
+                data-testid={ (el === answer) ? "correct-color" : "incorrect-color" } 
+                style={}
+              ></div>
+          )
+        })}
         </div>
-      */}
-    </div>  
+      <div className="resultOfClick">
+        { (answer) ? <h3>Correct!</h3> : <h3>Boooooo</h3>}
+      </div>
+      <button className="restart" onClick={() => setRestart(true)}> Restart </button>
+    </div >
+  </div>
     )
-}
+  }
+  {/*
+    <div data-testid="color-container">
+      <div data-testid="incorrect-color"></div>
+      <div data-testid="correct-color"></div>
+    </div>
+  */}

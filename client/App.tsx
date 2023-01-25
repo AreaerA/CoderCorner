@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <HelloWorld />
+        {/* <HelloWorld /> */}
         <ColorChange />
       </div>
     );
