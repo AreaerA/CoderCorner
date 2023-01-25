@@ -12,6 +12,7 @@
  */
 
 // import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
+import HelloWorld from './components/helloworld';
 import StarRating from './components/StarRating';
 import { Widget } from './components/StarWidget'
 
@@ -36,9 +37,7 @@ const App = () => {
   
     return (
       <div>
-        <StarRating />
-        <Widget />
-        {/* < HelloWorld / > */}
+        <HelloWorld />
       </div>
     );
 }

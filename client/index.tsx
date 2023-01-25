@@ -6,26 +6,44 @@
  *
  * ************************************
  */
-// Import the needed method, not all of React
+
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 // State Management
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 // React entry-point component
 import App from './App';
 // Redux state management
 import store from './store/index'
 
+// Import global css with reset
+import './stylesheets/global.css'
+
+// Initialize the React Router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+]);
+
 // New function for starting react app (2022) allows for current methods
 const root = createRoot(document.getElementById('root'));
 
+// Redux not established for app yet
+// Reater Router 6.4 set up
 const render = (Component) => {
   root.render(
     // <Provider store={store}>
-      <BrowserRouter>
-        <Component />
-      </BrowserRouter>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
     // </Provider>
   );
 };
