@@ -13,6 +13,7 @@
 import { Component } from 'react';
 // import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'; // webpack v5 does not allow named imports for JSON modules
+import ColorChange from './components/colorChange';
 import HelloWorld from './components/helloworld'
 
 
@@ -52,7 +53,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        < HelloWorld / >
+        <HelloWorld />
+        <ColorChange />
       </div>
     );
   }
