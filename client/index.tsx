@@ -22,11 +22,11 @@ const root = createRoot(document.getElementById('root'));
 
 const render = (Component) => {
   root.render(
-    <Provider store={store}>
+    // <Provider store={store}>
       <BrowserRouter>
         <Component />
       </BrowserRouter>
-    </Provider>
+    // </Provider>
   );
 };
 

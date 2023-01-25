@@ -14,6 +14,7 @@ import { Component } from 'react';
 // import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'; // webpack v5 does not allow named imports for JSON modules
 import HelloWorld from './components/helloworld'
+import GoogleMap from './components/Map';
 
 
 /**
@@ -35,8 +36,8 @@ const App = () => {
   
     return (
       <div>
-  
-        < HelloWorld / >
+        <GoogleMap />
+        {/* < HelloWorld / > */}
       </div>
     );
 }
