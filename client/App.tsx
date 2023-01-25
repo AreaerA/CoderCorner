@@ -23,32 +23,24 @@ import HelloWorld from './components/helloworld'
  *  social bot interceptor as well without having to remember to do so!
  */
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => {
+  //? State Implementation?//
+//     const [tournament, setTournament] = useState({});
 
-    this.state = {
-
-    };
-  }
-
-  // Initialize all current curriculum and YAML content on mount.
-  componentDidMount() {
-
-  }
-
-  componentDidUpdate() {
-
-  }
-
-  render() {
+//     useEffect(() => {
+//         fetch('/api/test')
+//             .then(res => res.json())
+//             .then(data => setLeaderboard(data))
+//     }, []);
+  
     return (
       <div>
+  
         < HelloWorld / >
       </div>
     );
-  }
 }
+
 
 {/* export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App)); */}
 export default App;
