@@ -29,6 +29,7 @@
 // Note: Without the data-testid properties, your tests will fail.
 import React, { useState, useEffect } from "react";
 
+
 export default function ColorChange() {
 
   const [answer, setAnswer] = useState<string>(''); 
@@ -65,12 +66,12 @@ const answerTest = (key) => {
 
   const style : CSS.Properties= {
     display: 'flex',
-    flex- flow: 'row-wrap',
+    // flex-flow: 'row-wrap',
     color: `${el}`,
     height: "10rem",
     width: "10rem",
     border: '1px',
-    border - style: "solid",
+    // border-style: "solid",
     }
     return (
   <div>
@@ -95,7 +96,14 @@ const answerTest = (key) => {
                 key={`${el}`} 
                 onClick= {() => answerTest(`${el}`)} 
                 data-testid={ (el === answer) ? "correct-color" : "incorrect-color" } 
-                style={}
+                style={{
+                  display: 'flex',
+                  // flex-flow: 'row-wrap',
+                  color: `${el}`,
+                  height: "10rem",
+                  width: "10rem",
+                  border: '1px',
+                }}
               ></div>
           )
         })}
@@ -108,9 +116,3 @@ const answerTest = (key) => {
   </div>
     )
   }
-  {/*
-    <div data-testid="color-container">
-      <div data-testid="incorrect-color"></div>
-      <div data-testid="correct-color"></div>
-    </div>
-  */}

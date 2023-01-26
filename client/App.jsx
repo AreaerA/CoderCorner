@@ -32,6 +32,7 @@ import {
 } from 'react-router-dom';
 //RR Tutorial infromation
 import { getContacts, createContact } from './contacts'
+import ColorChange from './routes/ColorChange';
 
 export const WIDGET_SIZE = 5
 
@@ -63,14 +64,14 @@ const App = () => {
 
   
   return (
-      <>
-      <div id='sidebar'>
+    <>
+      <div id="sidebar">
         <h1>Projects</h1>
         <div>
           <Form id="search-form" role="search">
             <input
               id="q"
-              className={searching ? "loading" : ""}
+              className={searching ? 'loading' : ''}
               aria-label="Search contacts"
               placeholder="Search"
               type="search"
@@ -81,21 +82,31 @@ const App = () => {
                 const isFirstSearch = q == null;
                 submit(e.currentTarget.form, {
                   replace: !isFirstSearch,
-                })
+                });
               }}
             />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden={!searching}
-            />
+            <div id="search-spinner" aria-hidden hidden={!searching} />
             <div className="sr-only" aria-live="polite"></div>
           </Form>
           <Form method="post">
-            <button type='submit'>New</button>
+            <button type="submit">New</button>
           </Form>
         </div>
         <nav>
+          <ul>
+            <li>
+              <Link to={`/helloWorld`}>Hellz Worldz</Link>
+            </li>
+            <li>
+              <Link to={`/StarWidget`}>Starz</Link>
+            </li>
+            <li>
+              <Link to={`/Stopwatch`}>Stopwatch</Link>
+            </li>
+            <li>
+              <Link to={`/ColorChange`}>Colorz</Link>
+            </li>
+          </ul>
           {contacts.length ? (
             <ul>
               {contacts.map((contact) => (
@@ -103,24 +114,18 @@ const App = () => {
                   <NavLink
                     to={`contacts/${contact.id}`}
                     //this is how we pass the information along
-                    className={({ isActive, isPending }) =>
-                      isActive
-                        ? "active"
-                        : isPending
-                        ? "pending"
-                        : ""
-                    }
+                    className={({ isActive, isPending }) => (isActive ? 'active' : isPending ? 'pending' : '')}
                   >
-                  <Link to={`contacts/${contact.id}`}>
-                    {contact.first || contact.last ? (
-                      <>
-                        {contact.first} {contact.last}
-                      </>
-                    ) : (
-                      <i>No Name</i>
-                    )}{" "}
-                    {contact.favorite && <span>★</span>}
-                  </Link>
+                    <Link to={`contacts/${contact.id}`}>
+                      {contact.first || contact.last ? (
+                        <>
+                          {contact.first} {contact.last}
+                        </>
+                      ) : (
+                        <i>No Name</i>
+                      )}{' '}
+                      {contact.favorite && <span>★</span>}
+                    </Link>
                   </NavLink>
                 </li>
               ))}
@@ -130,38 +135,13 @@ const App = () => {
               <i>No contacts</i>
             </p>
           )}
-          <ul>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`/contacts/1`}>Your Name</Link>
-            </li>
-          </ul>
         </nav>
       </div>
-      <div
-        id='detail'
-        className={
-          navigation.state === "loading" ? "loading" : ""
-        }
-      >
+      <div id="detail" className={navigation.state === 'loading' ? 'loading' : ''}>
         <Outlet />
       </div>
-      </>
-    );
+    </>
+  );
 }
 
 export default App;

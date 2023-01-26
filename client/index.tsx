@@ -30,13 +30,20 @@ import Contact, {
   loader as contactLoader,
   action as contactAction,
 } from './routes/contact';
+
 import EditContact, {
   action as editAction,
 } from './routes/edit';
+
 import {
   action as destroyAction
 } from './routes/destroy';
+
 import Index from './routes/index';
+import ColorChange from './routes/ColorChange';
+import HelloWorld from './routes/helloWorld';
+import StarWidget from './routes/StarWidget';
+import Stopwatch from './routes/Stopwatch';
 
 // Redux state management
 import store from './store/index'
@@ -59,6 +66,22 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Index />,
+          },
+          {
+            path: "ColorChange",
+            element: <ColorChange />
+          },
+          {
+            path: "helloWorld",
+            element: <HelloWorld />
+          },
+          {
+            path: "StarWidget",
+            element: <StarWidget />
+          },
+          {
+            path: "Stopwatch",
+            element: <Stopwatch />
           },
           {
             path: "contacts/:contactId",

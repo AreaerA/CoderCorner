@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { WIDGET_SIZE } from "../App"
-import { Star } from "./Star"
+import { Star } from "../components/Star"
 
-export const Widget = () => {
+export default function StarWidget() {
   const [numActiveStars, setNumActiveStars] = useState(0)
   const [numSavedStars, setNumSavedStars] = useState(0)
   const [isHover, setIsHover] = useState(false)
