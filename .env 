@@ -1,0 +1,24 @@
+# Number of migrations to run up to for dev database.
+# using numbers in naming convention when creating scripts using db-migrate
+DATABASE_MIGRATIONS=0
+
+# db-migrate scopes to run at startup - eg: DATABASE_SCOPES=newuser,profile,data - NO SPACES
+# each will represent a folder in migrations which should have all sql scripts run against it
+DATABASE_SCOPES=dev
+
+# db-migrate scopes to run at startup in the test-environment - eg: DATABASE_TEST_SCOPES=newuser,profile,data - NO SPACES
+# each will represent a folder in migrations which should have all sql scripts run against it.
+# DATABASE_TEST_SCOPES should contain all the DATABASE_SCOPES as well as any extra ones just for setting up the test database.
+DATABASE_TEST_SCOPES=testing
+
+# Don't look at this Git -->
+
+# Example for how to structure APIs for dev && production
+# REACT_APP_DEV_MODE=This is a development mode
+# REACT_APP_PRO_MODE=This is a production mode
+# In files
+# {process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_MODE : process.env.REACT_APP_PRO_MODE}
+
+# Open Weather API Key
+
+REACT_APP_OW_API_KEY=a107725fcd125ec94984e29e022e603a

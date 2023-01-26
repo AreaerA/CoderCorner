@@ -44,6 +44,7 @@ import ColorChange from './routes/ColorChange';
 import HelloWorld from './routes/helloWorld';
 import StarWidget from './routes/StarWidget';
 import Stopwatch from './routes/Stopwatch';
+import CityWeather from './routes/CityWeather';
 
 // Redux state management
 import store from './store/index'
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
           {
             path: "Stopwatch",
             element: <Stopwatch />
+          },
+          {
+            path: "CityWeather",
+            element: <CityWeather />
           },
           {
             path: "contacts/:contactId",

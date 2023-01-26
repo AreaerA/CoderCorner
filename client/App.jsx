@@ -89,7 +89,7 @@ const App = () => {
             <div className="sr-only" aria-live="polite"></div>
           </Form>
           <Form method="post">
-            <button type="submit">New</button>
+            <button type="submit">RRT: New</button>
           </Form>
         </div>
         <nav>
@@ -101,10 +101,13 @@ const App = () => {
               <Link to={`/StarWidget`}>Starz</Link>
             </li>
             <li>
-              <Link to={`/Stopwatch`}>Stopwatch</Link>
+              <Link to={`/Stopwatch`}>Stopwatchzz</Link>
             </li>
             <li>
               <Link to={`/ColorChange`}>Colorz</Link>
+            </li>
+            <li>
+              <Link to={`/CityWeather`}>Weatherz</Link>
             </li>
           </ul>
           {contacts.length ? (
@@ -119,10 +122,10 @@ const App = () => {
                     <Link to={`contacts/${contact.id}`}>
                       {contact.first || contact.last ? (
                         <>
-                          {contact.first} {contact.last}
+                          RRT: {contact.first} {contact.last}
                         </>
                       ) : (
-                        <i>No Name</i>
+                        <i>RRT: No Name</i>
                       )}{' '}
                       {contact.favorite && <span>★</span>}
                     </Link>
@@ -132,7 +135,7 @@ const App = () => {
             </ul>
           ) : (
             <p>
-              <i>No contacts</i>
+              <i>RRT: No contacts</i>
             </p>
           )}
         </nav>
