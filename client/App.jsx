@@ -109,6 +109,9 @@ const App = () => {
             <li>
               <Link to={`/CityWeather`}>Weatherz</Link>
             </li>
+            <li>
+              <Link to={`/Calendar`}>Calendar</Link>
+            </li>
           </ul>
           {contacts.length ? (
             <ul>
