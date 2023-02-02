@@ -1,0 +1,39 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.yearArrow {
+    display: inline-block;
+    padding: 90px;
+}
+
+.calendar {
+    border-style: solid;
+}
+
+/* .year-selector {
+  border-style: solid;
+} */
+
+.input-date {
+    border-style: solid;
+}
+
+.year-control-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.month-selector {
+    border-style: solid;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.month {
+    padding: 2em;
+}
