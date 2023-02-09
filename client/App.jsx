@@ -112,6 +112,9 @@ const App = () => {
             <li>
               <Link to={`/Calendar`}>Calendar</Link>
             </li>
+            <li>
+              <Link to={`/Search`}>Computer Mon-eez</Link>
+            </li>
           </ul>
           {contacts.length ? (
             <ul>

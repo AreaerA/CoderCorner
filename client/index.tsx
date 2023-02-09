@@ -46,7 +46,7 @@ import StarWidget from './routes/StarWidget';
 import Stopwatch from './routes/Stopwatch';
 import CityWeather from './routes/CityWeather';
 import Calendar from './routes/Calendar';
-
+import Search from './routes/Search';
 
 // Redux state management
 import store from './store/index'
@@ -90,9 +90,13 @@ const router = createBrowserRouter([
             path: "CityWeather",
             element: <CityWeather />
           },
-                    {
+          {
             path: "Calendar",
             element: <Calendar />
+          },
+          {
+            path: "Search",
+            element: <Search />
           },
           {
             path: "contacts/:contactId",
