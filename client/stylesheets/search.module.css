@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+.listItem {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #ddd;
+}
