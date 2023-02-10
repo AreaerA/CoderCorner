@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { JsxElement } from "typescript"
 import { WIDGET_SIZE } from "../App"
 import { Star } from "../components/Star"
 
-export default function StarWidget() {
+export default function StarWidget(): JSX.Element{
   const [numActiveStars, setNumActiveStars] = useState(0)
   const [numSavedStars, setNumSavedStars] = useState(0)
   const [isHover, setIsHover] = useState(false)

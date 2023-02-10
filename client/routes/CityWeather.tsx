@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { JsxAttribute, JsxElement } from "typescript";
 import '../stylesheets/weather.css'
 
 //api key information: https://openweathermap.org/appid
@@ -11,11 +12,14 @@ import '../stylesheets/weather.css'
   // city name
   //state code 
   // country code 
+type WeatherAPIRes = {
+  timezone: string,
+  current: string,
+}
 
-
-export default function CityWeather() {
+export default function CityWeather() : JSX.Element{
     //state needed
-    const [weather, setWeather] = useState({});
+    const [weather, setWeather] = useState<WeatherAPIRes | undefined> ();
 
     //useEffect for API call
         //data needed
@@ -27,7 +31,7 @@ export default function CityWeather() {
         fetch('./api')
             .then( res => res.json())
             .then(data => {
-                const obj = {};
+                const obj;
                 if(data.hasOwnProperty('timezone')) obj.timezone = data[timezone]
                 if(data.hasOwnProperty('current')) obj.current = data[current]
                 setWeather(obj)

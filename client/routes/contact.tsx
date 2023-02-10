@@ -24,8 +24,16 @@ export async function loader({ params }) {
   return contact;
 }
 
+type contact = {
+  first: string,
+  last: string,
+  avatar: string,
+  twitter: string,
+  notes: string,
+}
+
 export default function Contact() {
-  const contact = useLoaderData();
+  const contact: contact = useLoaderData();
 
   return (
     <div id="contact">

@@ -17,7 +17,7 @@ const calendar = {
 };
 
 
-export default function CalendarSelector() {
+export default function CalendarSelector(): JSX.Element {
   const [month, setMonth] = useState(1);
   const [year, setYear] = useState(2023);
 
